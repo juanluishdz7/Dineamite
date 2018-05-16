@@ -1,3 +1,5 @@
 # Dineamite
-
-## Juan Luis Hernandez
+## Chris H 
+## Amirah Islam 
+## Daniel T 
+## Juan Luis Hernandez 

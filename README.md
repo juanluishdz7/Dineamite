@@ -1,5 +1,4 @@
 # Dineamite
-
 ## Chris H 
 ## Amirah Islam 
 ## Daniel T 

@@ -1,0 +1,18 @@
+.jumbotron {
+    background: url("../images/home_img2.jpg") no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 5em inherit;
+    height: 500px;
+}
+body {
+    padding: 50px;
+    
+}
+
+.container .btn {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    
+}

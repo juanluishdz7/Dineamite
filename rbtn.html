@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <title>Dineamite</title>
   <!--Bootstrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-  crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	
@@ -20,7 +23,7 @@
 <br>
 <form onsubmit="results(); stop(); return false">
 <br>
-<ul>
+
   <input type="checkbox" name="q1" id="q1a" value="gfree">Gluten Free
   <input type="checkbox" name="q1" id="q1b" value="dfree">Dairy Free
   <input type="checkbox" name="q1" id="q1c" value="pale">Paleo
@@ -29,32 +32,36 @@
   <input type="checkbox" name="q2" id="q2b" value="pbased">Plant Based
   
   <h1>Select your Diet</h1>
-<label class="container"><button type="checkbox" class="btn btn-warning">Paleo</button></label>
-  <input type="checkbox" checked="checked">
-  <span class="checkmark"></span>
 
   <div class="btn-group-toggle" data-toggle="buttons">
-    <label class="btn btn-secondary active">
+  <label class="button"><button type="checkbox" class="btn btn-warning">I'll eat anything!!</button></label>
+  <label class="button"><button type="checkbox" class="btn btn-warning">Gluten</button></label>
+  <label class="button"><button type="checkbox" class="btn btn-warning">Dairy</button></label>
+  <label class="button"><button type="checkbox" class="btn btn-warning">Ketogenic</button></label>
+  <label class="button"><button type="checkbox" class="btn btn-warning">Plant Based</button></label>
+  <label class="button"><button type="checkbox" class="btn btn-warning">None</button></label>
+  <label class="button"><button type="checkbox" class="btn btn-warning">Paleo</button></label>
+  <label class="button"><button type="checkbox" class="btn btn-warning">Submit</button></label>
+  </div>
+
+  <div class="btn-group-toggle" data-toggle="buttons">
+    <label  class="btn btn-secondary active">
       <input type="checkbox" checked autocomplete="off"> Checked
     </label>
   </div>
+  <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-default active">
+        <input type="checkbox" checked autocomplete="off"> Checkbox 1 (pre-checked)
+      </label>
+      <label class="btn btn-default">
+        <input type="checkbox" autocomplete="off"> Checkbox 2
+      </label>
+      <label class="btn btn-default">
+        <input type="checkbox" autocomplete="off"> Checkbox 3
+      </label>
+    </div>
 
 
-</label>
-<label class="container">Dairy-free
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Paleo
-  <input type="checkbox">
-  <span class="checkmark"></span>
-</label>
-
-
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="assets/javascript/app.js"></script>
 </body>
 

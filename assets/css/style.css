@@ -16,3 +16,25 @@ body {
     left: 50%;
     
 }
+.btn-warning {
+    color: #212529;
+    background-color: ivory;
+    border-color: #ffc107;
+}
+
+.categories{
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    padding-top: 50px;
+    
+}
+.btn-group-toggle{
+    position: relative;
+    right: 25%;
+}
+
+.subbtn{
+    position: absolute;
+    right: 70%;
+}

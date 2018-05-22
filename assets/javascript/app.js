@@ -17,10 +17,10 @@ function displayFoodResults()
     console.log(response);
     });
 }
-
 //EVENT HANDLERS
 //================================================================
-$("#submit").on("click", function(){
+$("#submit").on("click", function()
+{
     event.preventDefault();
     var active = $(".active");
     for(var i = 0; i < active.length; i++)
@@ -31,6 +31,5 @@ $("#submit").on("click", function(){
         console.log(healthLabels)
     }
     displayFoodResults();
-
 })
 })

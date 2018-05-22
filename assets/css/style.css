@@ -17,8 +17,8 @@ body {
     
 }
 .btn-warning {
-    color: #212529;
-    background-color: ivory;
+    color: #fff;
+    background-color: #d9534f;
     border-color: #ffc107;
 }
 
@@ -38,3 +38,67 @@ body {
     position: absolute;
     right: 70%;
 }
+
+/* Media Queries*/
+
+@media screen and (max-width: 980px) {
+    .btn-group-toggle{
+        position: relative;
+        right: 10%;
+    }
+    
+    .subbtn{
+        position: absolute;
+        right: 65%;
+    }
+    .container .btn {
+        position: absolute;
+        top: 65%;
+        left: 52%;
+}
+    .categories{
+        padding-top: 5px;
+        padding-left: 30px;
+    }
+}
+ 
+ @media screen and (max-width: 768px) {
+    .container .btn {
+        position: absolute;
+        top: 65%;
+        left: 55%;
+    }
+    .categories{
+        padding-top: 5px;
+
+    }
+    .btn-group-toggle{
+        display: -webkit-inline-box;
+        padding-left: 30px;
+        
+    }
+ }
+ 
+ @media screen and (max-width: 640px) {
+    
+    .container .btn {
+        position: absolute;
+        top: 65%;
+        left: 42%;
+    }
+    
+    .categories {
+        position: absolute;
+        top: 90%;
+        left: 20%;
+    } 
+    
+    .btn-group-toggle{
+        position: relative;
+        right: 20%;
+        display: -webkit-inline-box;
+
+    }
+    
+    
+ }

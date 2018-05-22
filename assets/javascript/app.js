@@ -9,10 +9,11 @@ var healthLabels = [];
 //----------------------------------------------------------------
 function displayFoodResults()
 {
-    var queryURL = "https://api.edamam.com/search?q=" + foodSearch + "&app_id=b06e5d63&app_key=0545c2932c4566a17980ea67576b8879&healthLabels=" + healthLabels;
+    var queryURL = "https://api.edamam.com/search?q=" + foodSearch + "&app_id=4e2a44cc&app_key=786e4aca26fd298261a3f901cdbe7dcf&health=" + healthLabels;
     $.ajax({
       url: queryURL,
-      method: "GET"
+      method: "GET",
+      dataType: "jsonp"
     }).then(function(response){
     console.log(response);
     });

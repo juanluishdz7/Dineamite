@@ -23,7 +23,6 @@ function displayFoodResults()
 $("#submit").on("click", function(){
     event.preventDefault();
     var active = $(".active");
-    console.log(active.length)
     for(var i = 0; i < active.length; i++)
     {
         var checked = active[i].value;

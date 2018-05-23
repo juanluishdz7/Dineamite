@@ -98,20 +98,21 @@
  <div class="categories">
       <h1>Select your Diet</h1>
 
-
+<form>
   <div class="btn-group-toggle" data-toggle="buttons">
-  <label class="button"><button type="checkbox" class="btn btn-warning">Paleo</button></label>
-  <label class="button"><button type="checkbox" class="btn btn-warning">Gluten</button></label>
-  <label class="button"><button type="checkbox" class="btn btn-warning">Dairy</button></label>
-  <label class="button"><button type="checkbox" class="btn btn-warning">Ketogenic</button></label>
-  <label class="button"><button type="checkbox" class="btn btn-warning">Plant Based</button></label>
-  <label class="button"><button type="checkbox" class="btn btn-warning">I'll Eat Anything!!</button></label>
+  <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="paleo" value="paleo">Paleo</button></label>
+  <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="glutenFree" value="gluten-free">Gluten Free</button></label>
+  <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="dairyFree" value="dairy-free">Dairy Free</button></label>
+  <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="pescatarian" value="pescatarian">Ketogenic</button></label>
+  <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="vegetarian" value="vegetarian">Vegetarian</button></label>
+  <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="all" value="">I'll Eat Anything!!</button></label>
   </div>
   <!-- <span><h3>Add your own category: <input id="addbtn" type="text"> <input id="addbt" type="submit" value="Add button"></h3></span> -->
   <label class="subbtn"><button type="submit" id="submit" class="btn btn-warning">Submit</button></label>
   </div>
+</form>
 
-  <form>
+  <!-- <form>
     <div class="btn-group-toggle" data-toggle="buttons">
     <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="paleo" value="paleo">Paleo</button></label>
     <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="glutenFree" value="gluten-free">Gluten Free</button></label>
@@ -122,7 +123,7 @@
     </div>
     <span><h3>Add your own category: <input id="addbtn" type="text"> <input id="addbt" type="submit" value="Add button"></span></h3>
     <label class="subbtn"><button type="submit" id="submit" class="btn btn-warning">Submit</button></label>
-  </form>
+  </form> -->
 </div>
 
 

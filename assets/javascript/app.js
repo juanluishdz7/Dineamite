@@ -16,10 +16,7 @@ function displayFoodResults()
       dataType: "jsonp"
     }).then(function(response){
     console.log(response);
-    var localResponse = JSON.stringify(response);
-    localStorage.setItem("response",localResponse);
     });
-
 }
 //EVENT HANDLERS
 //================================================================
@@ -100,4 +97,7 @@ $("#submit").on("click", function()
 // // Carbs = Math.floor(Carbs)
 // // $("#Carbs").text("Carbs: " + Carbs + " grams");
 
-//image
+// //image
+// var recipeImage = response.hits[0].recipe.image;
+// $("#recipe").append("<img src=" + recipeImage + ">");
+// });

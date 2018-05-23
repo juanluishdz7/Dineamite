@@ -2,14 +2,14 @@ $(document).ready(function(){
 //GLOBAL VARIABLES
 //================================================================
 var foodSearch = "indian";
-var healthLabels = [];
+var healthLabels = "";
 //FUNCTIONS
 //================================================================
 //EDEMAM AJAX CALL
 //----------------------------------------------------------------
 function displayFoodResults()
 {
-    var queryURL = "https://api.edamam.com/search?q=" + foodSearch + "&app_id=4e2a44cc&app_key=786e4aca26fd298261a3f901cdbe7dcf&health=" + healthLabels;
+    var queryURL = "https://api.edamam.com/search?q=" + foodSearch + "&app_id=4e2a44cc&app_key=786e4aca26fd298261a3f901cdbe7dcf" + healthLabels;
     $.ajax({
       url: queryURL,
       method: "GET",
@@ -27,7 +27,7 @@ $("#submit").on("click", function()
     for(var i = 0; i < active.length; i++)
     {
         var checked = active[i].value;
-        healthLabels.push(checked)
+        healthLabels = healthLabels + "&health=" + checked;
         console.log(checked);
         console.log(healthLabels)
     }

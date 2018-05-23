@@ -8,12 +8,16 @@
   <meta content="Page description" name="description">
   <meta name="google" content="notranslate" />
   <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
   <link rel="shortcut icon" href="dlogo.jpg">
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"/>
   <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Spotify-->
+ 
 
 
   <!-- Disable tap highlight on IE -->
@@ -94,6 +98,7 @@
  <div class="categories">
       <h1>Select your Diet</h1>
 
+
   <div class="btn-group-toggle" data-toggle="buttons">
   <label class="button"><button type="checkbox" class="btn btn-warning">Paleo</button></label>
   <label class="button"><button type="checkbox" class="btn btn-warning">Gluten</button></label>
@@ -105,6 +110,22 @@
   <!-- <span><h3>Add your own category: <input id="addbtn" type="text"> <input id="addbt" type="submit" value="Add button"></h3></span> -->
   <label class="subbtn"><button type="submit" id="submit" class="btn btn-warning">Submit</button></label>
   </div>
+
+  <form>
+    <div class="btn-group-toggle" data-toggle="buttons">
+    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="paleo" value="paleo">Paleo</button></label>
+    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="glutenFree" value="gluten-free">Gluten Free</button></label>
+    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="dairyFree" value="dairy-free">Dairy Free</button></label>
+    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="pescatarian" value="pescatarian">Ketogenic</button></label>
+    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="vegetarian" value="Vegetarian">Vegetarian</button></label>
+    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="all" value="">I'll Eat Anything!!</button></label>
+    </div>
+    <span><h3>Add your own category: <input id="addbtn" type="text"> <input id="addbt" type="submit" value="Add button"></span></h3>
+    <label class="subbtn"><button type="submit" id="submit" class="btn btn-warning">Submit</button></label>
+  </form>
+</div>
+
+
 </body>
 <script>
         document.addEventListener("DOMContentLoaded", function (event) {
@@ -133,8 +154,10 @@
         ga('create', 'UA-XXXXX-X', 'auto');
         ga('send', 'pageview');
       </script>
-      
-      --><script type="text/javascript" src="./main.85741bff.js"></script></body>
+      -->
+    <script type="text/javascript" src="./main.85741bff.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    </body>
       
       
 </html>    

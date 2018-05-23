@@ -1,7 +1,7 @@
 $(document).ready(function(){
 //GLOBAL VARIABLES
 //================================================================
-var foodSearch = "indian";
+var foodSearch = "mediterranean";
 var healthLabels = "";
 //FUNCTIONS
 //================================================================
@@ -16,6 +16,8 @@ function displayFoodResults()
       dataType: "jsonp"
     }).then(function(response){
     console.log(response);
+    var localResponse = JSON.stringify(response);
+    localStorage.setItem("response", localResponse);
     });
 }
 //EVENT HANDLERS

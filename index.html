@@ -30,9 +30,9 @@
 
   <title>Dineamite</title>  
 
-<link href="./main.82cfd66e.css" rel="stylesheet"></head>
+<link href="./main.82cfd66e.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
-
+</head>
 
 <body>
 
@@ -55,8 +55,7 @@
             <img class="img-responsive site-logo" alt="" src="./assets/images/mashup-logo.svg">
             Dineamite
           </a>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor.</p>
+        <p>Dinner at your finger tips.</p>
       </div>
       <ul class="nav">
           <li><a href="./index.html" title="">Home</a></li>
@@ -92,13 +91,15 @@
         <div class="container">
           <h1 class="display-4"></h1>
           <p class="lead"></p>
-          <button type="button" class="btn btn-danger">Get Started</button>
+          <div id="get-started">
+            <button type="button" class="btn btn-danger">Get Started</button>
+          </div>  
         </div>
 </div>
  <div class="categories">
       <h1>Select your Diet</h1>
 
-<form>
+<form action="recipes.html">
   <div class="btn-group-toggle" data-toggle="buttons">
   <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="paleo" value="paleo">Paleo</button></label>
   <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="glutenFree" value="gluten-free">Gluten Free</button></label>
@@ -108,7 +109,8 @@
   <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="all" value="">I'll Eat Anything!!</button></label>
   </div>
   <!-- <span><h3>Add your own category: <input id="addbtn" type="text"> <input id="addbt" type="submit" value="Add button"></h3></span> -->
-  <label class="subbtn"><button type="submit" id="submit" class="btn btn-warning">Submit</button></label>
+  <!-- <a href="./recipes.html"><button type="submit" id="submit" class="btn btn-warning">Submit</button></a> -->
+  <label class="subbtn"><input class="btn btn-warning" type="submit" id="submit" onclick="location.href='recipes.html';" value="Submit"/></label>
   </div>
 </form>
 
@@ -158,6 +160,7 @@
       -->
     <script type="text/javascript" src="./main.85741bff.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script type="text/javascript" src="assets/javascript/animateApp.js"></script>
     </body>
       
       

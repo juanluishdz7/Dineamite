@@ -43,27 +43,35 @@ body {
 /* Media Queries*/
 
 @media screen and (max-width: 980px) {
+    body {
+        overflow-x: hidden;
+        width: 980px;
+    }
+ 
     .btn-group-toggle{
         position: relative;
-        right: 10%;
+        right: 27%;
     }
     
     .subbtn{
         position: absolute;
-        right: 65%;
+        right: 75%;
     }
     .container .btn {
         position: absolute;
         top: 65%;
         left: 52%;
-}
+ }
     .categories{
         padding-top: 5px;
-        padding-left: 30px;
+        padding-left: 10px;
     }
-}
+ }
  
  @media screen and (max-width: 768px) {
+    body {
+        width: 768px;
+    }
     .container .btn {
         position: absolute;
         top: 65%;
@@ -71,16 +79,18 @@ body {
     }
     .categories{
         padding-top: 5px;
-
+ 
     }
-    .btn-group-toggle{
-        display: -webkit-inline-box;
-        padding-left: 30px;
-        
+    .btn {
+        margin: 5px;
     }
  }
  
  @media screen and (max-width: 640px) {
+     body {
+         overflow-x: hidden;
+         width: 640px;
+     }
     
     .container .btn {
         position: absolute;
@@ -91,14 +101,18 @@ body {
     .categories {
         position: absolute;
         top: 90%;
-        left: 20%;
-    } 
+        left: 25%;
+    }
+    .checkbox {
+        padding-left: 0px;
+    }
     
-    .btn-group-toggle{
-        position: relative;
-        right: 20%;
-        display: -webkit-inline-box;
-
+    .btn-group-toggle {
+        display: inline-flex;
+    }
+    .subbtn {
+        position: absolute;
+        right: 73%;
     }
     
     

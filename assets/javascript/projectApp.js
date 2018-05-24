@@ -9,12 +9,14 @@ console.log(currentHit)
 //===================================================
 function displayProjectInfo()
 {
+    //Change recipe name
     $("#recipeName").text(currentHit.label);
+    //Change recipe image
     $("#recipeImg").attr("src", currentHit.image);
+    //Add ingredients list
     for(var i = 0; i < currentHit.ingredientLines.length; i++)
     {
         $("#ingredients").append("<li>" + currentHit.ingredientLines[i] + "</li>")
     }
-    // $("#ingredients").text(currentHit.ingredientLines);
 }
 displayProjectInfo();

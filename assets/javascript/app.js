@@ -1,7 +1,7 @@
 $(document).ready(function(){
 //GLOBAL VARIABLES
 //================================================================
-var foodSearch = "mediterranean";
+var foodSearch = "indian";
 var healthLabels = "";
 //FUNCTIONS
 //================================================================

@@ -25,9 +25,13 @@ body {
 .categories{
     position: absolute;
     top: 85%;
-    left: 40%;
+    left: 42%;
     padding-top: 50px;
     
+}
+
+h1 {
+    padding-left: 10px;
 }
 .btn-group-toggle{
     position: relative;
@@ -35,9 +39,9 @@ body {
     display: -webkit-inline-box;
 }
 
-.subbtn{
+#submit {
     position: absolute;
-    right: 70%;
+    right: 72%;
 }
 
 /* Media Queries*/
@@ -60,7 +64,7 @@ body {
     .container .btn {
         position: absolute;
         top: 65%;
-        left: 52%;
+        left: 55%;
  }
     .categories{
         padding-top: 5px;
@@ -80,6 +84,9 @@ body {
     .categories{
         padding-top: 5px;
  
+    }
+    .checkbox {
+        padding-left: 0px;
     }
     .btn {
         margin: 5px;
@@ -109,10 +116,11 @@ body {
     
     .btn-group-toggle {
         display: inline-flex;
+
     }
-    .subbtn {
+    #submit {
         position: absolute;
-        right: 73%;
+        right: 70%;
     }
     
     

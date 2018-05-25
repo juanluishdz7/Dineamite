@@ -18,6 +18,7 @@ function displayFoodResults()
     console.log(response);
     var localResponse = JSON.stringify(response);
     localStorage.setItem("response", localResponse);
+    window.location.href = "./recipes.html"
     });
 }
 //EVENT HANDLERS

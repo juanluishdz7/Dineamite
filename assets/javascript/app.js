@@ -25,6 +25,13 @@ function displayFoodResults()
 //================================================================
 $("#submit").on("click", function()
 {
+    if(foodSearch === "")
+    {
+        event.preventDefault();
+        alert("Select a cuisine")
+    }
+    else
+    {
     event.preventDefault();
     var active = $(".active");
     for(var i = 0; i < active.length; i++)
@@ -35,9 +42,12 @@ $("#submit").on("click", function()
         console.log(healthLabels)
     }
     displayFoodResults();
+    }
 })
+
 $(".cuisines").on("click", function()
 {
     foodSearch = $(this).attr("value");
+    $("#foodSearch").text(foodSearch)
 })
 })

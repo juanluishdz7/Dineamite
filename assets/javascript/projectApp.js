@@ -28,6 +28,27 @@ function displayProjectInfo()
     protein = Math.floor(protein);
     $("#protein").text("Protein: " + protein + " grams");
 
+    // Fat
+    var fat = currentHit.totalNutrients.FAT.quantity;
+    fat = Math.floor(fat)
+    $("#Fat").text("Fat: " + fat + " grams");
+
+    // carbs
+    var carbs = currentHit.totalDaily.CHOCDF.quantity;
+    carbs = Math.floor(carbs)
+    console.log(carbs);
+    $("#Carbs").text("Carbs: " + carbs + " grams");
+
+    var total = carbs + fat + protein;
+    console.log(total);
+    var fatPercentage = Math.floor((fat/total) * 100);
+    console.log(fatPercentage + "%");
+    var carbPercentage = Math.floor(carbs/total * 100);
+    console.log(carbPercentage + "%");
+    var proteinPercentage = Math.floor(protein/total * 100);
+    console.log(proteinPercentage + "%");
+    $("#breakdownPercentage").text("Carbs: " + carbPercentage + "%    Protein: " + proteinPercentage + "%   Fat: " + fatPercentage + "%");
+
     //fiber
     var fiber = currentHit.totalDaily.FIBTG.quantity;
     fiber = Math.floor(fiber);
@@ -42,11 +63,6 @@ function displayProjectInfo()
     var saturatedFat = currentHit.totalNutrients.FASAT.quantity;
     saturatedFat = Math.floor(saturatedFat)
     $("#saturatedFat").text("Saturated Fat: " + saturatedFat + " grams");
-
-    // Fat
-    var Fat = currentHit.totalNutrients.FAT.quantity;
-    Fat = Math.floor(Fat)
-    $("#Fat").text("Fat: " + Fat + " grams");
 
     // monounsaturatedFat
     var monounsaturatedFat = currentHit.totalNutrients.FAMS.quantity;
@@ -63,11 +79,14 @@ function displayProjectInfo()
     transFat = Math.floor(transFat)
     $("#transFat").text("transFat: " + transFat + " grams");
 
-    // carbs
-    var Carbs = currentHit.totalDaily.CHOCDF.quantity;
-    Carbs = Math.floor(Carbs)
-    console.log(Carbs);
-    $("#Carbs").text("Carbs: " + Carbs + " grams");
+    
+
+    
+
+    // carbs + protein + fat = TDE
+    //for carbs, carbs / TDE
+    //for protein, protein % TDE
+    // for fat, fat / TDE
 
     // //ingredients
     // var ingredients = currentHit.recipe.ingredients;

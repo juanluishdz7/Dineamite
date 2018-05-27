@@ -18,6 +18,8 @@ function displayFoodResults()
     console.log(response);
     var localResponse = JSON.stringify(response);
     localStorage.setItem("response", localResponse);
+    // set food search in local storage for use with ShoutCast API in projectApp.js
+    localStorage.setItem("genre", foodSearch);
     window.location.href = "./recipes.html"
     });
 }

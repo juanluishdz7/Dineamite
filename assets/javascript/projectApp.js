@@ -22,6 +22,42 @@ function playRadioStation()
     else if (radioGenre === "Chinese") {
         getStationID("Sleeping+Pill");
     }
+
+    else if (radioGenre === "French") {
+        getStationID("Davide+Of+MIMIC")
+    }
+
+    else if (radioGenre === "Greek") {
+        getStationID("RadioEpirus")
+    }
+
+    else if (radioGenre === "Indian") {
+        getStationID("Radio+HSL")
+    }
+
+    else if (radioGenre === "Italian") {
+        getStationID("Italo+Disco+Classic")
+    }
+
+    else if (radioGenre === "Japanese") {
+        getStationID("Sanctuary+Radio")
+    }
+
+    else if (radioGenre === "Mediterranean") {
+        getStationID("AbacusFM+Mozart")
+    }
+
+    else if (radioGenre === "Spanish") {
+        getStationID("1000+HITS+Spain+Music")
+    }
+
+    else if (radioGenre === "Thai") {
+        getStationID("Proton+Radio")
+    }
+
+    else if (radioGenre === "Mexican") {
+        getStationID("Radio+Mariachi+Stream")
+    }
 }
 
 function getStationID(keyword) 
@@ -147,34 +183,34 @@ function displayProjectInfo()
     $("#breakdownPercentage").text("Carbs: " + carbPercentage + "%    Protein: " + proteinPercentage + "%   Fat: " + fatPercentage + "%");
 
     //fiber
-    var fiber = currentHit.totalDaily.FIBTG.quantity;
-    fiber = Math.floor(fiber);
-    $("#fiber").text("Fiber: " + fiber + " grams");
+    // var fiber = currentHit.totalDaily.FIBTG.quantity;
+    // fiber = Math.floor(fiber);
+    // $("#fiber").text("Fiber: " + fiber + " grams");
 
     //sugars
     var sugars = currentHit.totalNutrients.SUGAR.quantity;
     sugars = Math.floor(sugars);
     $("#sugar").text("Sugars: " + sugars + " grams");
 
-    // saturatedFat
-    var saturatedFat = currentHit.totalNutrients.FASAT.quantity;
-    saturatedFat = Math.floor(saturatedFat)
-    $("#saturatedFat").text("Saturated Fat: " + saturatedFat + " grams");
+    // // saturatedFat
+    // var saturatedFat = currentHit.totalNutrients.FASAT.quantity;
+    // saturatedFat = Math.floor(saturatedFat)
+    // $("#saturatedFat").text("Saturated Fat: " + saturatedFat + " grams");
 
-    // monounsaturatedFat
-    var monounsaturatedFat = currentHit.totalNutrients.FAMS.quantity;
-    monounsaturatedFat = Math.floor(monounsaturatedFat)
-    $("#monounsaturatedFat").text("monounsaturatedFat: " + monounsaturatedFat + " grams");
+    // // monounsaturatedFat
+    // var monounsaturatedFat = currentHit.totalNutrients.FAMS.quantity;
+    // monounsaturatedFat = Math.floor(monounsaturatedFat)
+    // $("#monounsaturatedFat").text("monounsaturatedFat: " + monounsaturatedFat + " grams");
 
-    // polyunsaturatedFat
-    var polyunsaturatedFat = currentHit.totalNutrients.FAPU.quantity;
-    polyunsaturatedFat = Math.floor(polyunsaturatedFat)
-    $("#polyunsaturatedFat").text("polyunsaturatedFat: " + polyunsaturatedFat + " grams");
+    // // polyunsaturatedFat
+    // var polyunsaturatedFat = currentHit.totalNutrients.FAPU.quantity;
+    // polyunsaturatedFat = Math.floor(polyunsaturatedFat)
+    // $("#polyunsaturatedFat").text("polyunsaturatedFat: " + polyunsaturatedFat + " grams");
 
-    //  transFat
-    var transFat = currentHit.totalNutrients.FATRN.quantity;
-    transFat = Math.floor(transFat)
-    $("#transFat").text("transFat: " + transFat + " grams");
+    // //  transFat
+    // var transFat = currentHit.totalNutrients.FATRN.quantity;
+    // transFat = Math.floor(transFat)
+    // $("#transFat").text("transFat: " + transFat + " grams");
 
 playRadioStation();
 

@@ -41,7 +41,11 @@ h1 {
 
 #submit {
     position: absolute;
-    right: 72%;
+    right: 50%;
+}
+
+.cuisines:hover {
+    background-color: darkgray;
 }
 
 /* Media Queries*/

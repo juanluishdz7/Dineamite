@@ -6,7 +6,7 @@ $(document).ready(function()
     var stringResponse = JSON.parse(imageResponse);
     console.log(stringResponse);
     //Run for loop across 8 hits in ajax call
-    for (var i = 0; i < 8; i++)
+    for (var i = 0; i < 9; i++)
     {
         //Change header on page to ajax response
         var recipeName = stringResponse.hits[i].recipe.label;

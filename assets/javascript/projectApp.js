@@ -172,6 +172,7 @@ function displayProjectInfo()
     console.log(carbs);
     $("#Carbs").text("Carbs: " + carbs + " grams");
 
+    // carb + protein + fat percentages
     var total = carbs + fat + protein;
     console.log(total);
     var fatPercentage = Math.floor((fat/total) * 100);
@@ -211,6 +212,11 @@ function displayProjectInfo()
     // var transFat = currentHit.totalNutrients.FATRN.quantity;
     // transFat = Math.floor(transFat)
     // $("#transFat").text("transFat: " + transFat + " grams");
+
+    // URL for recipe page
+    var recipeURL = currentHit.url;
+    console.log(recipeURL);
+ 
 
 playRadioStation();
 

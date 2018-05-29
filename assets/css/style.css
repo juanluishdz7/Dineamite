@@ -139,22 +139,26 @@ h1 {
     
     
  } */
- @media screen and (max-width: 640px) and (min-width: 400px) {
-   body {
+ @media screen and (max-width: 640px) and (min-width: 300px) {
+     
+    body {
         width: 100%;
     }
    
-   .container .btn {
+    .container .btn {
        position: absolute;
        top: 65%;
-       left: 42%;
+       left: 40%;
    }
-   h1 {
+    h1 {
        position: relative;
+       top: 60%;
        right: 23%;
    }
    
    .categories {
+        position: absolute;
+        top: 105%;
         width: 100%;      
    }
    .checkbox {
@@ -162,13 +166,18 @@ h1 {
    }
    
    .btn-group-toggle {
-       display: flow-root;
+       display: inherit;
 
    }
    #submit {
-       position: absolute;
-       right: 40%;
+        top: 89%;
+        left: 20%;   
    }
+   #foodSearch {
+       position: absolute;
+       right: 60%;
+   }
+   
    
    
 }

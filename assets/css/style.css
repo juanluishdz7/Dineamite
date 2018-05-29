@@ -42,7 +42,12 @@ h1 {
 
 #submit {
     position: absolute;
-    right: 72%;
+    top: 80%;
+    right: 50%;
+}
+
+.cuisines:hover {
+    background-color: darkgray;
 }
 
 #photo {
@@ -85,14 +90,23 @@ h1 {
  
  @media screen and (max-width: 768px) {
     body {
-        width: 768px;
+        max-width: 768px;
     }
     .container .btn {
         position: absolute;
         top: 65%;
-        left: 55%;
+        left: 42%;
+    }
+    .sidebar {
+        display: none;
+    }
+    h1 {
+        width: 100%;
     }
     .categories{
+        width: 80%;
+        position: absolute;
+        left: 30%;
         padding-top: 5px;
  
     }
@@ -104,7 +118,7 @@ h1 {
     }
  }
  
- @media screen and (max-width: 640px) {
+ /* @media only screen and (max-width: 640px) {
      body {
          overflow-x: hidden;
          width: 640px;
@@ -119,7 +133,7 @@ h1 {
     .categories {
         position: absolute;
         top: 90%;
-        left: 25%;
+        left: 20%;
     }
     .checkbox {
         padding-left: 0px;
@@ -131,8 +145,50 @@ h1 {
     }
     #submit {
         position: absolute;
-        right: 70%;
+        right: 30%;
     }
     
     
- }
+ } */
+ @media screen and (max-width: 640px) and (min-width: 300px) {
+     
+    body {
+        width: 100%;
+    }
+   
+    .container .btn {
+       position: absolute;
+       top: 65%;
+       left: 40%;
+   }
+    h1 {
+       position: relative;
+       top: 60%;
+       right: 23%;
+   }
+   
+   .categories {
+        position: absolute;
+        top: 105%;
+        width: 100%;      
+   }
+   .checkbox {
+       padding-left: 0px;
+   }
+   
+   .btn-group-toggle {
+       display: inherit;
+
+   }
+   #submit {
+        top: 89%;
+        left: 20%;   
+   }
+   #foodSearch {
+       position: absolute;
+       right: 60%;
+   }
+   
+   
+   
+}

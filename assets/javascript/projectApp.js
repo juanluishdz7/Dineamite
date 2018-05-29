@@ -3,10 +3,143 @@
 var response = localStorage.getItem("response");
 var stringResponse = JSON.parse(response);
 var hit = localStorage.getItem("hit");
+var radioGenre = localStorage.getItem("genre");
 var currentHit = stringResponse.hits[hit].recipe;
 console.log(currentHit)
 //FUNCTIONS
 //===================================================
+
+function playRadioStation() 
+{
+    if (radioGenre === "American") {
+        getStationID("audiophile+jazz");
+    }
+
+    else if (radioGenre === "British") {
+        getStationID("HOT+108+JAMZ");
+    }
+
+    else if (radioGenre === "Chinese") {
+        getStationID("Sleeping+Pill");
+    }
+
+    else if (radioGenre === "French") {
+        getStationID("Davide+Of+MIMIC")
+    }
+
+    else if (radioGenre === "Greek") {
+        getStationID("RadioEpirus")
+    }
+
+    else if (radioGenre === "Indian") {
+        getStationID("Radio+HSL")
+    }
+
+    else if (radioGenre === "Italian") {
+        getStationID("Italo+Disco+Classic")
+    }
+
+    else if (radioGenre === "Japanese") {
+        getStationID("Sanctuary+Radio")
+    }
+
+    else if (radioGenre === "Mediterranean") {
+        getStationID("AbacusFM+Mozart")
+    }
+
+    else if (radioGenre === "Spanish") {
+        getStationID("1000+HITS+Spain+Music")
+    }
+
+    else if (radioGenre === "Thai") {
+        getStationID("Proton+Radio")
+    }
+
+    else if (radioGenre === "Mexican") {
+        getStationID("Radio+Mariachi+Stream")
+    }
+}
+
+function getStationID(keyword) 
+{
+  var radioID = "";
+  var queryURL = "https://cors-everywhere.herokuapp.com/https://api.shoutcast.com/legacy/stationsearch?k=RCOfdplHbBaOMy1C&search=" + keyword + "&limit=1"
+  console.log("This is the query URL: " + queryURL);
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+   console.log(response);
+    //the response is in XML so we call a function that converts it to JSON (xmlToJson)
+  var convertedResponse = xmlToJson(response);
+  console.log(convertedResponse);
+  radioID = convertedResponse.stationlist.station["@attributes"].id
+  console.log("radio ID is " + radioID);
+  callRadioStation(radioID);
+  });
+}
+
+  // we need to take the response we just got back and grab the station ID.  i just added an id to the query for now so you can see it in action.  
+
+// This API call uses the station ID we just got back and sends it to the HTML audio player
+function callRadioStation(radioID) {
+ var radioqueryURL = "https://cors-everywhere.herokuapp.com/https://yp.shoutcast.com/sbin/tunein-station.m3u?id=" + radioID;
+ $.ajax({
+   url: radioqueryURL,
+   method: "GET"
+ }).then(function(response) {
+  console.log(response);
+
+radioURL = response.substring(response.indexOf("http") - 1);
+console.log(radioURL);
+
+// // add the URL to the src of the HTML player
+   $("#player").attr("src", "" + radioURL + "");
+ });
+};
+
+
+
+  // // Changes XML to JSON
+  function xmlToJson(xml) {
+    
+    // Create the return object
+    var obj = {};
+
+    if (xml.nodeType == 1) { // element
+      // do attributes
+      if (xml.attributes.length > 0) {
+      obj["@attributes"] = {};
+        for (var j = 0; j < xml.attributes.length; j++) {
+          var attribute = xml.attributes.item(j);
+          obj["@attributes"][attribute.nodeName] = attribute.nodeValue;
+        }
+      }
+    } else if (xml.nodeType == 3) { // text
+      obj = xml.nodeValue;
+    }
+
+    // do children
+    if (xml.hasChildNodes()) {
+      for(var i = 0; i < xml.childNodes.length; i++) {
+        var item = xml.childNodes.item(i);
+        var nodeName = item.nodeName;
+        if (typeof(obj[nodeName]) == "undefined") {
+          obj[nodeName] = xmlToJson(item);
+        } else {
+          if (typeof(obj[nodeName].push) == "undefined") {
+            var old = obj[nodeName];
+            obj[nodeName] = [];
+            obj[nodeName].push(old);
+          }
+          obj[nodeName].push(xmlToJson(item));
+        }
+      }
+    }
+    return obj;
+  };
+
+
 function displayProjectInfo()
 {
     //Change recipe name
@@ -39,6 +172,7 @@ function displayProjectInfo()
     console.log(carbs);
     $("#Carbs").text("Carbs: " + carbs + " grams");
 
+    // carb + protein + fat percentages
     var total = carbs + fat + protein;
     console.log(total);
     var fatPercentage = Math.floor((fat/total) * 100);
@@ -50,59 +184,41 @@ function displayProjectInfo()
     $("#breakdownPercentage").text("Carbs: " + carbPercentage + "%    Protein: " + proteinPercentage + "%   Fat: " + fatPercentage + "%");
 
     //fiber
-    var fiber = currentHit.totalDaily.FIBTG.quantity;
-    fiber = Math.floor(fiber);
-    $("#fiber").text("Fiber: " + fiber + " grams");
+    // var fiber = currentHit.totalDaily.FIBTG.quantity;
+    // fiber = Math.floor(fiber);
+    // $("#fiber").text("Fiber: " + fiber + " grams");
 
     //sugars
     var sugars = currentHit.totalNutrients.SUGAR.quantity;
     sugars = Math.floor(sugars);
     $("#sugar").text("Sugars: " + sugars + " grams");
 
-    // saturatedFat
-    var saturatedFat = currentHit.totalNutrients.FASAT.quantity;
-    saturatedFat = Math.floor(saturatedFat)
-    $("#saturatedFat").text("Saturated Fat: " + saturatedFat + " grams");
+    // // saturatedFat
+    // var saturatedFat = currentHit.totalNutrients.FASAT.quantity;
+    // saturatedFat = Math.floor(saturatedFat)
+    // $("#saturatedFat").text("Saturated Fat: " + saturatedFat + " grams");
 
-    // monounsaturatedFat
-    var monounsaturatedFat = currentHit.totalNutrients.FAMS.quantity;
-    monounsaturatedFat = Math.floor(monounsaturatedFat)
-    $("#monounsaturatedFat").text("monounsaturatedFat: " + monounsaturatedFat + " grams");
+    // // monounsaturatedFat
+    // var monounsaturatedFat = currentHit.totalNutrients.FAMS.quantity;
+    // monounsaturatedFat = Math.floor(monounsaturatedFat)
+    // $("#monounsaturatedFat").text("monounsaturatedFat: " + monounsaturatedFat + " grams");
 
-    // polyunsaturatedFat
-    var polyunsaturatedFat = currentHit.totalNutrients.FAPU.quantity;
-    polyunsaturatedFat = Math.floor(polyunsaturatedFat)
-    $("#polyunsaturatedFat").text("polyunsaturatedFat: " + polyunsaturatedFat + " grams");
+    // // polyunsaturatedFat
+    // var polyunsaturatedFat = currentHit.totalNutrients.FAPU.quantity;
+    // polyunsaturatedFat = Math.floor(polyunsaturatedFat)
+    // $("#polyunsaturatedFat").text("polyunsaturatedFat: " + polyunsaturatedFat + " grams");
 
-    //  transFat
-    var transFat = currentHit.totalNutrients.FATRN.quantity;
-    transFat = Math.floor(transFat)
-    $("#transFat").text("transFat: " + transFat + " grams");
+    // //  transFat
+    // var transFat = currentHit.totalNutrients.FATRN.quantity;
+    // transFat = Math.floor(transFat)
+    // $("#transFat").text("transFat: " + transFat + " grams");
 
-    
+    // URL for recipe page
+    var recipeURL = currentHit.url;
+    console.log(recipeURL);
+ 
 
-    
+playRadioStation();
 
-    // carbs + protein + fat = TDE
-    //for carbs, carbs / TDE
-    //for protein, protein % TDE
-    // for fat, fat / TDE
-
-    // //ingredients
-    // var ingredients = currentHit.recipe.ingredients;
-    //  for(i = 0; i < ingredients.length; i++) {
-    //    $("#ingredients").append("<div>" + ingredients[i].text + "</div>");
-    //    console.log(ingredients[0].text);
-    //  }
-
-    // //number of Ingredients
-    // // var numIngredients = currentHit.recipe.totalDaily.CHOCDF.quantity;
-    // // Carbs = Math.floor(Carbs)
-    // // $("#Carbs").text("Carbs: " + Carbs + " grams");
-
-    // //image
-    // var recipeImage = currentHit.image;
-    // $("#recipe").append("<img src=" + recipeImage + ">");
-    // });
 }
 displayProjectInfo();

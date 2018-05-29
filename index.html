@@ -36,7 +36,7 @@
     <div class="navbar-collapse" id="navbar-collapse">
       <div class="site-header hidden-xs">
           <a class="site-brand" href="./index.html" title="">
-            <img class="img-responsive site-logo" alt="" src="./assets/images/mashup-logo.svg">
+            <img id="logo" class="img-responsive site-logo" alt="" src="./assets/images/mashup-logo.svg">
             Dineamite
           </a>
         <p>Dinner at your finger tips.</p>
@@ -45,7 +45,7 @@
           <li><a href="./index.html" title="">Home</a></li>
           <li><a href="./recipes.html" title="">Recipes</a></li>
           <li><a href="./about.html" title="">About</a></li>
-          <li><a href="./services.html" title="">Services</a></li>
+          <!-- <li><a href="./services.html" title="">Services</a></li> -->
           <li><a href="./contact.html" title="">Contact</a></li>
           <!-- <li><a href="./components.html" title="">Components</a></li> -->
       </ul>
@@ -77,45 +77,52 @@
           </div>  
         </div>
 </div>
+
  <div class="categories">
-      <h1>Select your Diet</h1>
-<form action="recipes.html">
-  <div class="btn-group-toggle" data-toggle="buttons">
-    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="paleo" value="paleo">Paleo</button></label>
-    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="glutenFree" value="gluten-free">Gluten Free</button></label>
-    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="dairyFree" value="dairy-free">Dairy Free</button></label>
-    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="pescatarian" value="pescatarian">Ketogenic</button></label>
-    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="vegetarian" value="vegetarian">Vegetarian</button></label>
-    <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="all" value="vegan">Vegan</button></label>
+          <h1>Select your Diet</h1>
+
+    <form action="recipes.html">
+
+      <div class="btn-group-toggle" data-toggle="buttons">
+        <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="paleo" value="paleo">Paleo</button></label>
+        <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="glutenFree" value="gluten-free">Gluten Free</button></label>
+        <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="dairyFree" value="dairy-free">Dairy Free</button></label>
+        <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="pescatarian" value="pescatarian">Ketogenic</button></label>
+        <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="vegetarian" value="vegetarian">Vegetarian</button></label>
+        <label class="button checkbox"><button type="checkbox" name="check" class="btn btn-warning" id="all" value="vegan">Vegan</button></label>
+      </div>
+
+      <a href="./recipes.html"><button type="submit" id="submit" class="btn btn-warning cuisineSubmit">Submit</button></a>
+      <button type="submit" id="dietSelect" class="btn btn-warning dietSubmit">Submit</button>
+    </form>
+
+</div>
+
+  <div class="btn-group cuisineDisplay">
+    <button type="button" class="btn btn-danger" id="foodSearch">Cuisines</button>
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li class="cuisines" value="American">American</li>
+      <li class="cuisines" value="British">British</li>
+      <li class="cuisines" value="Chinese">Chinese</li>
+      <li class="cuisines" value="French">French</li>
+      <li class="cuisines" value="Greek">Greek</li>
+      <li class="cuisines" value="Indian">Indian</li>
+      <li class="cuisines" value="Italian">Italian</li>
+      <li class="cuisines" value="Japanese">Japanese</li>
+      <li class="cuisines" value="Mediterranean">Mediterranean</li>
+      <li class="cuisines" value="Thai">Thai</li>
+      <li class="cuisines" value="Mexican">Mexican</li>
+      <li class="cuisines" value="Spanish">Spanish</li>
+    </ul>
   </div>
-  <!-- <span><h3>Add your own category: <input id="addbtn" type="text"> <input id="addbt" type="submit" value="Add button"></h3></span> -->
-    <a href="./recipes.html"><button type="submit" id="submit" class="btn btn-warning">Submit</button></a>
-  <!-- <label class="subbtn"><input class="btn btn-warning" type="submit" id="submit" onclick="location.href='recipes.html';" value="Submit"/></label> -->
-</form>
-<div class="btn-group">
-  <button type="button" class="btn btn-danger" id="foodSearch">Cuisines</button>
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li class="cuisines" value="American">American</li>
-    <li class="cuisines" value="British">British</li>
-    <li class="cuisines" value="Chinese">Chinese</li>
-    <li class="cuisines" value="French">French</li>
-    <li class="cuisines" value="Greek">Greek</li>
-    <li class="cuisines" value="Indian">Indian</li>
-    <li class="cuisines" value="Italian">Italian</li>
-    <li class="cuisines" value="Japanese">Japanese</li>
-    <li class="cuisines" value="Mediterranean">Mediterranean</li>
-    <li class="cuisines" value="Thai">Thai</li>
-    <li class="cuisines" value="Mexican">Mexican</li>
-    <li class="cuisines" value="Spanish">Spanish</li>
-  </ul>
-</div>
-</div>
+
 </body>
-      <script>
+
+      <!-- <script>
         document.addEventListener("DOMContentLoaded", function (event) {
            masonryBuild();
         });
@@ -128,7 +135,7 @@
         navbarToggleSidebar();
         navActivePage();
       });
-      </script>
+      </script> -->
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

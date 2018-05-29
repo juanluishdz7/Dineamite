@@ -5,10 +5,11 @@
     padding: 5em inherit;
     height: 500px;
 }
-body {
+
+/* body {
     padding: 50px;
     
-}
+} */
 
 .container .btn {
     position: absolute;
@@ -43,6 +44,16 @@ h1 {
     position: absolute;
     right: 72%;
 }
+
+#photo {
+    width: 400px;
+    height: 300px;
+    filter: opacity(90%);
+    filter: contrast(10%);
+    filter: drop-shadow(5px 5px 5px grey);
+  }
+
+
 
 /* Media Queries*/
 

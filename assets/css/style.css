@@ -25,7 +25,7 @@
 
 .categories{
     position: absolute;
-    top: 85%;
+    top: 70%;
     left: 42%;
     padding-top: 50px;
     
@@ -41,9 +41,23 @@ h1 {
 }
 
 #submit {
+    position: absolute;    
+    right: 35%;
+    top: 86%;
+    color: #fff;
+    border-color: #d9534f;
+    padding: 8px 30px;
+}
+#dietSelect {
+    position: fixed;
+    right: 10%;
+    top: 88.4%;
+}
+
+.btn-group, .btn-group-vertical {
     position: absolute;
-    top: 80%;
     right: 50%;
+    bottom: 8%;
 }
 
 .cuisines:hover {
@@ -57,7 +71,7 @@ h1 {
     filter: contrast(10%);
     filter: drop-shadow(5px 5px 5px grey);
   }
-
+  
 
 
 /* Media Queries*/
@@ -97,9 +111,7 @@ h1 {
         top: 65%;
         left: 42%;
     }
-    .sidebar {
-        display: none;
-    }
+    
     h1 {
         width: 100%;
     }

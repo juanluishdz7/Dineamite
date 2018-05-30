@@ -216,6 +216,8 @@ function displayProjectInfo()
     // URL for recipe page
     var recipeURL = currentHit.url;
     console.log(recipeURL);
+    $("#recipeLink").text("Check out the recipe here!");
+    $("#recipeLink").attr("href", recipeURL);
  
 
 playRadioStation();

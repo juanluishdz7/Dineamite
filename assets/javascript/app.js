@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 //GLOBAL VARIABLES
 //================================================================
 var foodSearch = "";

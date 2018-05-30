@@ -1,9 +1,13 @@
 $(document).ready(function(){
 
     $('.categories').hide();
+    $('.cuisineDisplay').hide();
+    $('#dietSelect').hide();
+    $('#submit').hide();
     
     $('#get-started').on('click', () => {
         $('.categories').show();
+        $('#dietSelect').show();
         $('.cuisineDisplay').hide();
         $('.cuisineSubmit').hide();
         $("html, body").animate({
@@ -16,6 +20,8 @@ $(document).ready(function(){
         event.preventDefault()
         $('.categories').hide();
         $('.cuisineDisplay').show();
-        $('.dietSubmit').hide();
-        alert("this gone");
+        $('#submit').show();
+
+        // $('.dietSubmit').hide();
+        // alert("this gone");
     });

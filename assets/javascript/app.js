@@ -30,7 +30,7 @@ $("#submit").on("click", function()
     if(foodSearch === "")
     {
         event.preventDefault();
-        alert("Select a cuisine")
+        alert("Select a cuisine");
     }
     else
     {

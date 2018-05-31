@@ -54,6 +54,17 @@ h1 {
     top: 88.4%;
 }
 
+#needCuisine {
+        position: absolute;    
+        right: 48%;
+        top: 83%;
+        color:  black;
+        font-size: 15pt;
+        border-color: #d9534f;
+        padding: 8px 30px;
+    
+}
+
 .btn-group, .btn-group-vertical {
     position: absolute;
     right: 50%;

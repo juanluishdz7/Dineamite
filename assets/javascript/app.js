@@ -32,7 +32,7 @@ function displayFoodResults()
         if(foodSearch === "")
         {
             event.preventDefault();
-            alert("Select a cuisine")
+            $("#needCuisine").show();
         }
         else
         {

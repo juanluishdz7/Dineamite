@@ -24,7 +24,7 @@ function playRadioStation()
     }
 
     else if (radioGenre === "French") {
-        getStationID("Davide+Of+MIMIC")
+        getStationID("Gem+Radio+New+Wave")
     }
 
     else if (radioGenre === "Greek") {
@@ -32,7 +32,7 @@ function playRadioStation()
     }
 
     else if (radioGenre === "Indian") {
-        getStationID("Radio+HSL")
+        getStationID("All+60s+All+The+Time")
     }
 
     else if (radioGenre === "Italian") {
@@ -40,7 +40,7 @@ function playRadioStation()
     }
 
     else if (radioGenre === "Japanese") {
-        getStationID("Sanctuary+Radio")
+        getStationID("PARTY+VIBE+RADIO")
     }
 
     else if (radioGenre === "Mediterranean") {
@@ -48,7 +48,7 @@ function playRadioStation()
     }
 
     else if (radioGenre === "Spanish") {
-        getStationID("1000+HITS+Spain+Music")
+        getStationID("ADR+202+Vintage+Soul")
     }
 
     else if (radioGenre === "Thai") {

@@ -62,7 +62,14 @@ h1 {
         font-size: 15pt;
         border-color: #d9534f;
         padding: 8px 30px;
-    
+}
+
+input.invalid, textarea.invalid{
+	border: 2px solid red;
+}
+
+input.valid, textarea.valid{
+	border: 2px solid green;
 }
 
 .btn-group, .btn-group-vertical {
@@ -83,6 +90,16 @@ h1 {
     filter: drop-shadow(5px 5px 5px grey);
   }
   
+.error{
+	display: none;
+	margin-left: 10px;
+}		
+
+.error_show{
+	color: red;
+	margin-left: 10px;
+}
+
 
 
 /* Media Queries*/

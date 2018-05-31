@@ -4,6 +4,7 @@ $(document).ready(function(){
     $('.cuisineDisplay').hide();
     $('#dietSelect').hide();
     $('#submit').hide();
+    $('#needCuisine').hide();
     
     $('#get-started').on('click', () => {
         $('.categories').show();

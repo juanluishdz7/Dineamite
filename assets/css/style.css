@@ -117,7 +117,8 @@ h1 {
     }
     #recipeName {
         text-align: center;
-        padding-left: 80px;
+        padding-left: 200px;
+        font-size: 4vmax;
     }
  }   
 

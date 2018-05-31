@@ -80,6 +80,7 @@ input.valid, textarea.valid{
 
 .cuisines:hover {
     background-color: darkgray;
+    cursor: pointer;
 }
 
 #photo {

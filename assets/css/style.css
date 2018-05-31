@@ -78,6 +78,10 @@ input.valid, textarea.valid{
     bottom: 8%;
 }
 
+.cuisines {
+    padding: 6px;
+}
+
 .cuisines:hover {
     background-color: darkgray;
     cursor: pointer;
@@ -99,6 +103,19 @@ input.valid, textarea.valid{
 .error_show{
 	color: red;
 	margin-left: 10px;
+}
+
+.radio-color {
+    background: whitesmoke;
+    border-radius: 15px 50px;
+    padding: 20px; 
+    width: 350px;
+    height: 150px;
+    text-align: center;
+    filter: drop-shadow(5px 5px 5px grey);
+    position: flex;
+    left: 200px;
+    top: 400px; 
 }
 
 
@@ -150,6 +167,8 @@ input.valid, textarea.valid{
         font-size: 4vmax;
     }
  }   
+
+
 
 /* @media only screen and (max-width: 1024px) {
     

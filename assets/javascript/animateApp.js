@@ -22,6 +22,9 @@ $(document).ready(function(){
         $('.categories').hide();
         $('.cuisineDisplay').show();
         $('#submit').show();
+        $("html, body").animate({
+            scrollTop: $(".cuisines").offset().top
+        }, 800);
 
         // $('.dietSubmit').hide();
         // alert("this gone");

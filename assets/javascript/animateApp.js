@@ -26,6 +26,5 @@ $(document).ready(function(){
             scrollTop: $(".cuisines").offset().top
         }, 800);
 
-        // $('.dietSubmit').hide();
-        // alert("this gone");
+
     });

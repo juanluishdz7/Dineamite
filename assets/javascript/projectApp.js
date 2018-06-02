@@ -16,7 +16,7 @@ function playRadioStation()
     }
 
     else if (radioGenre === "British") {
-        getStationID("HOT+108+JAMZ");
+        getStationID("Awesome+80");
     }
 
     else if (radioGenre === "Chinese") {
@@ -48,7 +48,7 @@ function playRadioStation()
     }
 
     else if (radioGenre === "Spanish") {
-        getStationID("ADR+202+Vintage+Soul")
+        getStationID("Awesome+80")
     }
 
     else if (radioGenre === "Thai") {
